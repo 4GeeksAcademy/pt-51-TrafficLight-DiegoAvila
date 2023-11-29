@@ -1,24 +1,20 @@
-import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useState } from 'react';
+import Semaforo from "./semaforo";
 
 //create your first component
 const Home = () => {
+		
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="text-center p-3 mt-3 bg-">
+			<div className="rojo">
+				<Semaforo color={"bg-danger bg-opacity-50"}/>
+			</div>
+			<div className="naranja">
+				<Semaforo color={"bg-warning bg-opacity-50"}/>
+			</div>
+			<div className="verde">
+				<Semaforo color={"bg-success bg-opacity-50"}/>	
+			</div>
 		</div>
 	);
 };
